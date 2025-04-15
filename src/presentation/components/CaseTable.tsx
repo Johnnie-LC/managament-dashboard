@@ -1,4 +1,4 @@
-import { Case } from "@/domain/entities/Case";
+import { Case } from "@domain/entities/Case";
 import { Link } from "react-router";
 
 interface Props {

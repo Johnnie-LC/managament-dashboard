@@ -1,10 +1,10 @@
-import CaseFilters from "../components/CaseFilters";
-import CaseTable from "../components/CaseTable";
-import { useFilteredCases } from "../hooks/useFilteredCases";
+import CaseFilters from "@presentation/components/CaseFilters";
+import CaseTable from "@presentation/components/CaseTable";
+import { useCaseListPage } from "@presentation/hooks/useFilteredCases";
 
 export default function CaseListPage() {
   const { cases, search, setSearch, statusFilter, setStatusFilter } =
-    useFilteredCases();
+    useCaseListPage();
 
   return (
     <div className="p-6">

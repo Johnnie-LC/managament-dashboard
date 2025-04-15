@@ -1,4 +1,4 @@
-import { MedicalStatus } from "@/domain/valueObjects/MedicalStatus"
+import { MedicalStatus } from "@domain/valueObjects/MedicalStatus"
 import { Case } from "@domain/entities/Case"
 import { CaseRepository } from "@domain/repositories/CaseRespository"
 
@@ -23,6 +23,14 @@ const mockData: Case[] = [
     id: '3',
     client_name: 'Carlos Sánchez',
     doa: '2023-08-20',
+    medical_status: MedicalStatus.InProgress,
+    client_status: 'Active',
+    law_firm: 'Abogados S.A.',
+  },
+  {
+    id: '4',
+    client_name: 'Pedro Paramo',
+    doa: '2024-02-25',
     medical_status: MedicalStatus.InProgress,
     client_status: 'Active',
     law_firm: 'Abogados S.A.',

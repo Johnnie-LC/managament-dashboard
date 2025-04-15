@@ -3,7 +3,7 @@ import { Case } from '@domain/entities/Case'
 import { MockCaseRepository } from '@infrastructure/data/MockCaseRepository'
 import { useEffect, useState } from 'react'
 
-export function useFilteredCases() {
+export function useCaseListPage() {
   const [allCases, setAllCases] = useState<Case[]>([])
   const [search, setSearch] = useState('')
   const [statusFilter, setStatusFilter] = useState('All')

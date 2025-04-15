@@ -1,14 +1,19 @@
+import { useEffect } from 'react'
 import { GetCaseList } from '@application/usecases/GetCaseList'
-import { Case } from '@domain/entities/Case'
 import { MockCaseRepository } from '@infrastructure/data/MockCaseRepository'
-import { useEffect, useState } from 'react'
+import { useCaseFiltersStore } from '@presentation/stores/useCaseFiltersStore'
 
 export function useCaseListPage() {
-  const [allCases, setAllCases] = useState<Case[]>([])
-  const [search, setSearch] = useState('')
-  const [statusFilter, setStatusFilter] = useState('All')
+  const {
+    allCases,
+    setAllCases,
+    search,
+    statusFilter,
+  } = useCaseFiltersStore()
 
   useEffect(() => {
+    if (allCases.length > 0) return; 
+
     const fetchCases = async () => {
       const repo = new MockCaseRepository()
       const useCase = new GetCaseList(repo)
@@ -17,7 +22,7 @@ export function useCaseListPage() {
     }
 
     fetchCases()
-  }, [])
+  }, [allCases, setAllCases])
 
   const filteredCases = allCases.filter((c) => {
     const matchesSearch = c.client_name.toLowerCase().includes(search.toLowerCase())
@@ -25,11 +30,5 @@ export function useCaseListPage() {
     return matchesSearch && matchesStatus
   })
 
-  return {
-    cases: filteredCases,
-    search,
-    setSearch,
-    statusFilter,
-    setStatusFilter,
-  }
+  return { cases: filteredCases }
 }

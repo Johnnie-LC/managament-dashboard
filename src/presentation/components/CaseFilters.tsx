@@ -1,20 +1,12 @@
 import { SearchInput } from "@presentation/components/SearchInput";
 import { StatusDropdown } from "@presentation/components/StatusDropdown";
 import { useCaseFilters } from "@presentation/hooks/useCaseFilters";
+import { useCaseFiltersStore } from "../stores/useCaseFiltersStore";
 
-interface Props {
-  search: string;
-  setSearch: (value: string) => void;
-  statusFilter: string;
-  setStatusFilter: (value: string) => void;
-}
+export default function CaseFilters() {
+  const { search, setSearch, statusFilter, setStatusFilter } =
+    useCaseFiltersStore();
 
-export default function CaseFilters({
-  search,
-  setSearch,
-  statusFilter,
-  setStatusFilter,
-}: Props) {
   const { localSearch, setLocalSearch } = useCaseFilters({ search, setSearch });
 
   return (

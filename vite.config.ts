@@ -6,7 +6,7 @@ import { resolve } from 'path';
 
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base:`/`,
+  base:`/managament-dashboard/`,
   resolve:{
     alias: {
       "@":resolve(__dirname, './src'),

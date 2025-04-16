@@ -20,7 +20,7 @@ const router = createBrowserRouter(
       ],
     },
   ],
-  { basename: "/managament-dashboard" }
+  { basename: "/managament-dashboard/" }
 );
 
 export default function AppRouter() {

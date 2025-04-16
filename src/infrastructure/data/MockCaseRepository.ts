@@ -10,6 +10,12 @@ const mockData: Case[] = [
     medical_status: MedicalStatus.Active,
     client_status: 'Open',
     law_firm: 'LegalCo',
+    date_of_birth: '2023-11-15',
+    date_of_incident: '2023-11-15',
+    expenses: [
+      { id: 'e1', label: 'Medical Bill', amount: 500, deducted_from: 'Settlement' },
+      { id: 'e2', label: 'Transportation', amount: 150, deducted_from: 'Client' },
+    ],
   },
   {
     id: '2',
@@ -18,6 +24,12 @@ const mockData: Case[] = [
     medical_status: MedicalStatus.Pending,
     client_status: 'Closed',
     law_firm: 'JusticeNow',
+    date_of_birth: '2023-11-15',
+    date_of_incident: '2023-11-15',
+    expenses: [
+      { id: 'e1', label: 'Medical Bill', amount: 500, deducted_from: 'Settlement' },
+      { id: 'e2', label: 'Transportation', amount: 150, deducted_from: 'Client' },
+    ],
   },
   {
     id: '3',
@@ -26,6 +38,12 @@ const mockData: Case[] = [
     medical_status: MedicalStatus.InProgress,
     client_status: 'Active',
     law_firm: 'Abogados S.A.',
+    date_of_birth: '2023-11-15',
+    date_of_incident: '2023-11-15',
+    expenses: [
+      { id: 'e1', label: 'Medical Bill', amount: 500, deducted_from: 'Settlement' },
+      { id: 'e2', label: 'Transportation', amount: 150, deducted_from: 'Client' },
+    ],
   },
   {
     id: '4',
@@ -34,6 +52,8 @@ const mockData: Case[] = [
     medical_status: MedicalStatus.InProgress,
     client_status: 'Active',
     law_firm: 'Abogados S.A.',
+    date_of_birth: '2023-11-15',
+    date_of_incident: '2023-11-15'
   },
 ]
 

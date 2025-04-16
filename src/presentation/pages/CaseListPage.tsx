@@ -1,5 +1,5 @@
-import CaseFilters from "@presentation/components/CaseFilters";
-import CaseTable from "@presentation/components/CaseTable";
+import CaseFilters from "@/presentation/components/caseList/CaseFilters";
+import CaseTable from "@/presentation/components/caseList/CaseTable";
 import { useCaseListPage } from "@presentation/hooks/useFilteredCases";
 
 export default function CaseListPage() {

@@ -1,7 +1,7 @@
-import { SearchInput } from "@presentation/components/SearchInput";
-import { StatusDropdown } from "@presentation/components/StatusDropdown";
+import { SearchInput } from "@presentation/components/caseList/SearchInput";
+import { StatusDropdown } from "@presentation/components/caseList/StatusDropdown";
 import { useCaseFilters } from "@presentation/hooks/useCaseFilters";
-import { useCaseFiltersStore } from "../stores/useCaseFiltersStore";
+import { useCaseFiltersStore } from "@stores/useCaseFiltersStore";
 
 export default function CaseFilters() {
   const { search, setSearch, statusFilter, setStatusFilter } =

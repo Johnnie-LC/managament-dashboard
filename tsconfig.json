@@ -13,7 +13,8 @@
       "@routes/*": ["./src/routes/*"],
       "@domain/*":["./src/domain/*"],
       "@application/*":["./src/application/*"],
-      "@infrastructure/*":["./src/infrastructure/*"]
+      "@infrastructure/*":["./src/infrastructure/*"],
+      "@stores/*": ["src/presentation/stores/*"]
     },
     /* Bundler mode */
     "moduleResolution": "bundler",

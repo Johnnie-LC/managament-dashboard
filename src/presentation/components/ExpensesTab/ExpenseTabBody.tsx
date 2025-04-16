@@ -14,8 +14,8 @@ export function ExpenseTabBody({
   toggleSelect,
 }: ExpenseTabBodyProps) {
   return (
-    <table className="min-w-full border border-gray-200">
-      <thead className="bg-gray-100 text-left">
+    <table className="min-w-full">
+      <thead className="text-left">
         <tr>
           <th className="p-2">
             <input
@@ -30,14 +30,14 @@ export function ExpenseTabBody({
               }
             />
           </th>
-          <th className="p-2 border-b">Label</th>
-          <th className="p-2 border-b">Amount</th>
-          <th className="p-2 border-b">Deducted From</th>
+          <th className="p-2">Label</th>
+          <th className="p-2">Amount</th>
+          <th className="p-2">Deducted From</th>
         </tr>
       </thead>
       <tbody>
         {expenses.map((exp) => (
-          <tr key={exp.id} className="border-t">
+          <tr key={exp.id} className="odd:bg-white  even:bg-gray-50">
             <td className="p-2">
               <input
                 type="checkbox"

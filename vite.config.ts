@@ -15,7 +15,8 @@ export default defineConfig({
       '@domain': resolve(__dirname, './src/domain'),
       "@application": resolve(__dirname,'./src/application'),
       "@infrastructure": resolve(__dirname,'./src/infrastructure'),
-      "@stores": resolve(__dirname, './src/presentation/stores')
+      "@stores": resolve(__dirname, './src/presentation/stores'),
+      "@components": resolve(__dirname, './src/presentation/components')
     }
   }
 })

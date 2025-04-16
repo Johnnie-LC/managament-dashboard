@@ -24,8 +24,11 @@ export function useCaseListPage() {
     fetchCases()
   }, [allCases, setAllCases])
 
+  const normalizeText = (text: string) =>
+    text.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase()
+
   const filteredCases = allCases.filter((c) => {
-    const matchesSearch = c.client_name.toLowerCase().includes(search.toLowerCase())
+    const matchesSearch = normalizeText(c.client_name).includes(normalizeText(search))
     const matchesStatus = statusFilter === 'All' || c.medical_status === statusFilter
     return matchesSearch && matchesStatus
   })

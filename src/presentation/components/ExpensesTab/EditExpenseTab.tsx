@@ -10,7 +10,7 @@ export function EditExpenseTab({
   setIsModalOpen,
 }: EditExpenseTabProps) {
   return (
-    <div className="flex justify-between">
+    <div className="flex gap-2 justify-end">
       <button
         onClick={handleDelete}
         disabled={selectedIds.length === 0}

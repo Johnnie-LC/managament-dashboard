@@ -3,22 +3,25 @@ import CaseListPage from "@presentation/pages/CaseListPage";
 import CaseDetailPage from "@presentation/pages/CaseDetailPage";
 import RootLayout from "@presentation/layouts/RootLayout";
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <RootLayout />,
-    children: [
-      {
-        index: true,
-        element: <CaseListPage />,
-      },
-      {
-        path: "case/:id",
-        element: <CaseDetailPage />,
-      },
-    ],
-  },
-]);
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <RootLayout />,
+      children: [
+        {
+          index: true,
+          element: <CaseListPage />,
+        },
+        {
+          path: "case/:id",
+          element: <CaseDetailPage />,
+        },
+      ],
+    },
+  ],
+  { basename: "/managament-dashboard" }
+);
 
 export default function AppRouter() {
   return <RouterProvider router={router} />;

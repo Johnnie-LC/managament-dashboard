@@ -1,7 +1,7 @@
 export interface EditExpenseTabProps {
-  handleDelete: () => void;
-  selectedIds: string[];
-  setIsModalOpen: (e: boolean) => void;
+  handleDelete: () => void
+  selectedIds: string[]
+  setIsModalOpen: (e: boolean) => void
 }
 
 export function EditExpenseTab({
@@ -26,5 +26,5 @@ export function EditExpenseTab({
         Add Expense
       </button>
     </div>
-  );
+  )
 }

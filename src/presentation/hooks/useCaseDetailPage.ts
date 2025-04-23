@@ -12,12 +12,12 @@ export function useCaseDetailPage() {
   const [caseData, setCaseData] = useState<Case | null>(null)
   const { setExpenses, expensesByCaseId } = useCaseExpensesStore()
   const { allCases, updateCaseById } = useCaseFiltersStore()
-  
+
   const existingCase = allCases.find((c) => c.id === id)
 
   useEffect(() => {
     if (!id) return
-    
+
     if (existingCase) {
       setCaseData(existingCase)
       setExpenses(id, existingCase.expenses ?? [])

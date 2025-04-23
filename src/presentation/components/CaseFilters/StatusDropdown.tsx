@@ -1,8 +1,8 @@
-import { MedicalStatus } from "@domain/valueObjects/MedicalStatus";
+import { MedicalStatus } from '@domain/valueObjects/MedicalStatus'
 
 interface StatusDropdownProps {
-  value: string;
-  onChange: (value: string) => void;
+  value: string
+  onChange: (value: string) => void
 }
 
 export function StatusDropdown({ value, onChange }: StatusDropdownProps) {
@@ -19,5 +19,5 @@ export function StatusDropdown({ value, onChange }: StatusDropdownProps) {
         </option>
       ))}
     </select>
-  );
+  )
 }

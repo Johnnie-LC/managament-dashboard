@@ -1,10 +1,10 @@
-import { AddExpenseModal } from "../AddExpenseModal";
-import { EditExpenseTab } from "./EditExpenseTab";
-import { ExpenseTabBody } from "./ExpenseTabBody";
-import { useExpensesTab } from "./hooks/useExpensesTab";
+import { AddExpenseModal } from '../AddExpenseModal'
+import { EditExpenseTab } from './EditExpenseTab'
+import { ExpenseTabBody } from './ExpenseTabBody'
+import { useExpensesTab } from './hooks/useExpensesTab'
 
 export function ExpensesTab() {
-  const expensesTab = useExpensesTab();
+  const expensesTab = useExpensesTab()
 
   return (
     <div className="space-y-4 px-5 pt-5">
@@ -28,5 +28,5 @@ export function ExpensesTab() {
         />
       )}
     </div>
-  );
+  )
 }

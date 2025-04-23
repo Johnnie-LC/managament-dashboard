@@ -1,12 +1,12 @@
-import { createBrowserRouter, RouterProvider } from "react-router";
-import CaseListPage from "@presentation/pages/CaseListPage";
-import CaseDetailPage from "@presentation/pages/CaseDetailPage";
-import RootLayout from "@presentation/layouts/RootLayout";
+import { createBrowserRouter, RouterProvider } from 'react-router'
+import CaseListPage from '@presentation/pages/CaseListPage'
+import CaseDetailPage from '@presentation/pages/CaseDetailPage'
+import RootLayout from '@presentation/layouts/RootLayout'
 
 const router = createBrowserRouter(
   [
     {
-      path: "/",
+      path: '/',
       element: <RootLayout />,
       children: [
         {
@@ -14,15 +14,15 @@ const router = createBrowserRouter(
           element: <CaseListPage />,
         },
         {
-          path: "case/:id",
+          path: 'case/:id',
           element: <CaseDetailPage />,
         },
       ],
     },
   ],
-  { basename: "/managament-dashboard/" }
-);
+  { basename: '/managament-dashboard/' }
+)
 
 export default function AppRouter() {
-  return <RouterProvider router={router} />;
+  return <RouterProvider router={router} />
 }

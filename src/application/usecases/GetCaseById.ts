@@ -1,7 +1,6 @@
 import { CaseRepository } from '@domain/repositories/CaseRespository'
 import { Case } from '@domain/entities/Case'
 
-
 export class GetCaseById {
   constructor(private repo: CaseRepository) {}
 

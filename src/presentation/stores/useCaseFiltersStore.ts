@@ -2,7 +2,6 @@ import { CaseExpense } from '@/domain/entities/CaseExpense'
 import { Case } from '@domain/entities/Case'
 import { create } from 'zustand'
 
-
 interface CaseFiltersState {
   search: string
   setSearch: (value: string) => void

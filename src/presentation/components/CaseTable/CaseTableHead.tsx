@@ -9,5 +9,5 @@ export default function CaseTableHead() {
         <th className="p-3 flex-1">Law Firm</th>
       </tr>
     </thead>
-  );
+  )
 }

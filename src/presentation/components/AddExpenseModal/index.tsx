@@ -1,20 +1,20 @@
-import { useAddExpenseModal } from "@components/AddExpenseModal/hooks/useAddExpenseModal";
-import { BodyAddExpenseModal } from "./BodyAddExpenseModal";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faX } from "@fortawesome/free-solid-svg-icons";
+import { useAddExpenseModal } from '@components/AddExpenseModal/hooks/useAddExpenseModal'
+import { BodyAddExpenseModal } from './BodyAddExpenseModal'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faX } from '@fortawesome/free-solid-svg-icons'
 
 interface Props {
-  onClose: () => void;
+  onClose: () => void
   onSave: (expense: {
-    id: string;
-    label: string;
-    amount: number;
-    deducted_from: string;
-  }) => void;
+    id: string
+    label: string
+    amount: number
+    deducted_from: string
+  }) => void
 }
 
 export function AddExpenseModal({ onClose, onSave }: Props) {
-  const expenseModal = useAddExpenseModal({ onSave: onSave });
+  const expenseModal = useAddExpenseModal({ onSave: onSave })
 
   return (
     <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
@@ -39,5 +39,5 @@ export function AddExpenseModal({ onClose, onSave }: Props) {
         </div>
       </div>
     </div>
-  );
+  )
 }

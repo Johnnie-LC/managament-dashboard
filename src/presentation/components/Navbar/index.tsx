@@ -1,7 +1,7 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFolderOpen, faFileAlt } from "@fortawesome/free-regular-svg-icons";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
-import { NavbarItem } from "./NavbarItem";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFolderOpen, faFileAlt } from '@fortawesome/free-regular-svg-icons'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
+import { NavbarItem } from './NavbarItem'
 
 export function Navbar() {
   return (
@@ -14,5 +14,5 @@ export function Navbar() {
         <NavbarItem path="/case/1" icon={faFileAlt} />
       </nav>
     </div>
-  );
+  )
 }

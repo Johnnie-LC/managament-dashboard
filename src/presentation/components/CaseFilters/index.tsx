@@ -1,15 +1,15 @@
-import { SearchInput } from "@components/CaseFilters/SearchInput";
-import { StatusDropdown } from "@components/CaseFilters/StatusDropdown";
-import { useCaseFilters } from "@presentation/hooks/useCaseFilters";
-import { useCaseFiltersStore } from "@stores/useCaseFiltersStore";
+import { SearchInput } from '@components/CaseFilters/SearchInput'
+import { StatusDropdown } from '@components/CaseFilters/StatusDropdown'
+import { useCaseFilters } from '@presentation/hooks/useCaseFilters'
+import { useCaseFiltersStore } from '@stores/useCaseFiltersStore'
 
 export default function CaseFilters() {
-  const filtersStore = useCaseFiltersStore();
+  const filtersStore = useCaseFiltersStore()
 
   const { localSearch, setLocalSearch } = useCaseFilters({
     search: filtersStore.search,
     setSearch: filtersStore.setSearch,
-  });
+  })
 
   return (
     <>
@@ -22,5 +22,5 @@ export default function CaseFilters() {
         onChange={filtersStore.setStatusFilter}
       />
     </>
-  );
+  )
 }

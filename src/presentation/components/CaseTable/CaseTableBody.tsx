@@ -1,13 +1,13 @@
-import { Case } from "@/domain/entities/Case";
-import React from "react";
-import { useNavigate } from "react-router";
+import { Case } from '@/domain/entities/Case'
+import React from 'react'
+import { useNavigate } from 'react-router'
 
 interface CaseTableBodyProps {
-  cases: Case[];
+  cases: Case[]
 }
 
 export default function CaseTableBody({ cases }: CaseTableBodyProps) {
-  const navigate = useNavigate();
+  const navigate = useNavigate()
   return (
     <tbody>
       {cases.map((c) => (
@@ -32,5 +32,5 @@ export default function CaseTableBody({ cases }: CaseTableBodyProps) {
         </React.Fragment>
       ))}
     </tbody>
-  );
+  )
 }

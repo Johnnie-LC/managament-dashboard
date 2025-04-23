@@ -1,9 +1,9 @@
-import { Case } from "@domain/entities/Case";
-import CaseTableBody from "./CaseTableBody";
-import CaseTableHead from "./CaseTableHead";
+import { Case } from '@domain/entities/Case'
+import CaseTableBody from './CaseTableBody'
+import CaseTableHead from './CaseTableHead'
 
 interface Props {
-  cases: Case[];
+  cases: Case[]
 }
 
 export default function CaseTable({ cases }: Props) {
@@ -14,5 +14,5 @@ export default function CaseTable({ cases }: Props) {
         <CaseTableBody cases={cases} />
       </table>
     </div>
-  );
+  )
 }

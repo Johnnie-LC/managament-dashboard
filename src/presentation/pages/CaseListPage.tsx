@@ -1,9 +1,9 @@
-import CaseFilters from "@components/CaseFilters";
-import CaseTable from "@components/CaseTable";
-import { useCaseListPage } from "@presentation/hooks/useFilteredCases";
+import CaseFilters from '@components/CaseFilters'
+import CaseTable from '@components/CaseTable'
+import { useCaseListPage } from '@presentation/hooks/useFilteredCases'
 
 export default function CaseListPage() {
-  const { cases } = useCaseListPage();
+  const { cases } = useCaseListPage()
 
   return (
     <section className="flex-1 flex flex-col p-3 bg-blue-100 m-0 ">
@@ -12,5 +12,5 @@ export default function CaseListPage() {
         <CaseTable cases={cases} />
       </div>
     </section>
-  );
+  )
 }

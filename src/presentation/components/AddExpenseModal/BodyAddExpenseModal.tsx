@@ -1,13 +1,13 @@
 export interface BodyModalProps {
-  deductionType: string;
-  label: string;
+  deductionType: string
+  label: string
   errors: {
-    [key: string]: string;
-  };
-  amount: string;
-  setDeductionType: (e: string) => void;
-  setLabel: (e: string) => void;
-  setAmount: (e: string) => void;
+    [key: string]: string
+  }
+  amount: string
+  setDeductionType: (e: string) => void
+  setLabel: (e: string) => void
+  setAmount: (e: string) => void
 }
 
 export const BodyAddExpenseModal = ({
@@ -28,7 +28,7 @@ export const BodyAddExpenseModal = ({
             value={deductionType}
             onChange={(e) => setDeductionType(e.target.value)}
             className={`w-full p-2 border rounded ${
-              errors.deductionType ? "border-red-500" : ""
+              errors.deductionType ? 'border-red-500' : ''
             }`}
           >
             <option value="">Select one</option>
@@ -48,7 +48,7 @@ export const BodyAddExpenseModal = ({
             value={label}
             onChange={(e) => setLabel(e.target.value)}
             className={`w-full p-2 border rounded ${
-              errors.label ? "border-red-500" : ""
+              errors.label ? 'border-red-500' : ''
             }`}
             placeholder="e.g. X-Ray"
           />
@@ -64,7 +64,7 @@ export const BodyAddExpenseModal = ({
             value={amount}
             onChange={(e) => setAmount(e.target.value)}
             className={`w-full p-2 border rounded ${
-              errors.amount ? "border-red-500" : ""
+              errors.amount ? 'border-red-500' : ''
             }`}
             placeholder="e.g. 250.00"
           />
@@ -74,5 +74,5 @@ export const BodyAddExpenseModal = ({
         </div>
       </div>
     </>
-  );
-};
+  )
+}

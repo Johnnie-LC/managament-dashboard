@@ -1,10 +1,10 @@
-import { CaseExpense } from "@domain/entities/CaseExpense";
+import { CaseExpense } from '@domain/entities/CaseExpense'
 
 export interface ExpenseTabBodyProps {
-  setSelectedIds: (e: string[]) => void;
-  expenses: CaseExpense[];
-  selectedIds: string[];
-  toggleSelect: (id: string) => void;
+  setSelectedIds: (e: string[]) => void
+  expenses: CaseExpense[]
+  selectedIds: string[]
+  toggleSelect: (id: string) => void
 }
 
 export function ExpenseTabBody({
@@ -52,5 +52,5 @@ export function ExpenseTabBody({
         ))}
       </tbody>
     </table>
-  );
+  )
 }

@@ -1,6 +1,6 @@
-import { MedicalStatus } from "@domain/valueObjects/MedicalStatus"
-import { Case } from "@domain/entities/Case"
-import { CaseRepository } from "@domain/repositories/CaseRespository"
+import { MedicalStatus } from '@domain/valueObjects/MedicalStatus'
+import { Case } from '@domain/entities/Case'
+import { CaseRepository } from '@domain/repositories/CaseRespository'
 
 const mockData: Case[] = [
   {
@@ -13,11 +13,36 @@ const mockData: Case[] = [
     date_of_birth: '2023-11-15',
     date_of_incident: '2023-11-15',
     expenses: [
-      { id: 'e1', label: 'Medical Bill', amount: 500, deducted_from: 'Settlement' },
-      { id: 'e2', label: 'Transportation', amount: 150, deducted_from: 'Client' },
-      { id: 'e3', label: 'Transportation', amount: 150, deducted_from: 'Client' },
-      { id: 'e4', label: 'Transportation', amount: 150, deducted_from: 'Client' },
-      { id: 'e5', label: 'Transportation', amount: 150, deducted_from: 'Client' },
+      {
+        id: 'e1',
+        label: 'Medical Bill',
+        amount: 500,
+        deducted_from: 'Settlement',
+      },
+      {
+        id: 'e2',
+        label: 'Transportation',
+        amount: 150,
+        deducted_from: 'Client',
+      },
+      {
+        id: 'e3',
+        label: 'Transportation',
+        amount: 150,
+        deducted_from: 'Client',
+      },
+      {
+        id: 'e4',
+        label: 'Transportation',
+        amount: 150,
+        deducted_from: 'Client',
+      },
+      {
+        id: 'e5',
+        label: 'Transportation',
+        amount: 150,
+        deducted_from: 'Client',
+      },
     ],
   },
   {
@@ -30,9 +55,24 @@ const mockData: Case[] = [
     date_of_birth: '2023-11-15',
     date_of_incident: '2023-11-15',
     expenses: [
-      { id: 'e1', label: 'Medical Bill', amount: 500, deducted_from: 'Settlement' },
-      { id: 'e2', label: 'Transportation', amount: 150, deducted_from: 'Client' },
-      { id: 'e3', label: 'Transportation', amount: 150, deducted_from: 'Client' },
+      {
+        id: 'e1',
+        label: 'Medical Bill',
+        amount: 500,
+        deducted_from: 'Settlement',
+      },
+      {
+        id: 'e2',
+        label: 'Transportation',
+        amount: 150,
+        deducted_from: 'Client',
+      },
+      {
+        id: 'e3',
+        label: 'Transportation',
+        amount: 150,
+        deducted_from: 'Client',
+      },
     ],
   },
   {
@@ -45,9 +85,24 @@ const mockData: Case[] = [
     date_of_birth: '2023-11-15',
     date_of_incident: '2023-11-15',
     expenses: [
-      { id: 'e1', label: 'Medical Bill', amount: 500, deducted_from: 'Settlement' },
-      { id: 'e2', label: 'Transportation', amount: 150, deducted_from: 'Client' },
-      { id: 'e3', label: 'Transportation', amount: 150, deducted_from: 'Client' },
+      {
+        id: 'e1',
+        label: 'Medical Bill',
+        amount: 500,
+        deducted_from: 'Settlement',
+      },
+      {
+        id: 'e2',
+        label: 'Transportation',
+        amount: 150,
+        deducted_from: 'Client',
+      },
+      {
+        id: 'e3',
+        label: 'Transportation',
+        amount: 150,
+        deducted_from: 'Client',
+      },
     ],
   },
   {
@@ -58,7 +113,7 @@ const mockData: Case[] = [
     client_status: 'Active',
     law_firm: 'Abogados S.A.',
     date_of_birth: '2023-11-15',
-    date_of_incident: '2023-11-15'
+    date_of_incident: '2023-11-15',
   },
   {
     id: '5',
@@ -70,9 +125,24 @@ const mockData: Case[] = [
     date_of_birth: '2023-11-15',
     date_of_incident: '2023-11-15',
     expenses: [
-      { id: 'e1', label: 'Medical Bill', amount: 500, deducted_from: 'Settlement' },
-      { id: 'e2', label: 'Transportation', amount: 150, deducted_from: 'Client' },
-      { id: 'e3', label: 'Transportation', amount: 150, deducted_from: 'Client' },
+      {
+        id: 'e1',
+        label: 'Medical Bill',
+        amount: 500,
+        deducted_from: 'Settlement',
+      },
+      {
+        id: 'e2',
+        label: 'Transportation',
+        amount: 150,
+        deducted_from: 'Client',
+      },
+      {
+        id: 'e3',
+        label: 'Transportation',
+        amount: 150,
+        deducted_from: 'Client',
+      },
     ],
   },
   {
@@ -85,9 +155,24 @@ const mockData: Case[] = [
     date_of_birth: '2023-11-15',
     date_of_incident: '2023-11-15',
     expenses: [
-      { id: 'e1', label: 'Medical Bill', amount: 500, deducted_from: 'Settlement' },
-      { id: 'e2', label: 'Transportation', amount: 150, deducted_from: 'Client' },
-      { id: 'e3', label: 'Transportation', amount: 150, deducted_from: 'Client' },
+      {
+        id: 'e1',
+        label: 'Medical Bill',
+        amount: 500,
+        deducted_from: 'Settlement',
+      },
+      {
+        id: 'e2',
+        label: 'Transportation',
+        amount: 150,
+        deducted_from: 'Client',
+      },
+      {
+        id: 'e3',
+        label: 'Transportation',
+        amount: 150,
+        deducted_from: 'Client',
+      },
     ],
   },
   {
@@ -100,9 +185,24 @@ const mockData: Case[] = [
     date_of_birth: '2023-11-15',
     date_of_incident: '2023-11-15',
     expenses: [
-      { id: 'e1', label: 'Medical Bill', amount: 500, deducted_from: 'Settlement' },
-      { id: 'e2', label: 'Transportation', amount: 150, deducted_from: 'Client' },
-      { id: 'e3', label: 'Transportation', amount: 150, deducted_from: 'Client' },
+      {
+        id: 'e1',
+        label: 'Medical Bill',
+        amount: 500,
+        deducted_from: 'Settlement',
+      },
+      {
+        id: 'e2',
+        label: 'Transportation',
+        amount: 150,
+        deducted_from: 'Client',
+      },
+      {
+        id: 'e3',
+        label: 'Transportation',
+        amount: 150,
+        deducted_from: 'Client',
+      },
     ],
   },
   {
@@ -113,7 +213,7 @@ const mockData: Case[] = [
     client_status: 'Active',
     law_firm: 'Abogados S.A.',
     date_of_birth: '2023-11-15',
-    date_of_incident: '2023-11-15'
+    date_of_incident: '2023-11-15',
   },
   {
     id: '9',
@@ -125,8 +225,18 @@ const mockData: Case[] = [
     date_of_birth: '2023-11-15',
     date_of_incident: '2023-11-15',
     expenses: [
-      { id: 'e1', label: 'Medical Bill', amount: 500, deducted_from: 'Settlement' },
-      { id: 'e2', label: 'Transportation', amount: 150, deducted_from: 'Client' },
+      {
+        id: 'e1',
+        label: 'Medical Bill',
+        amount: 500,
+        deducted_from: 'Settlement',
+      },
+      {
+        id: 'e2',
+        label: 'Transportation',
+        amount: 150,
+        deducted_from: 'Client',
+      },
     ],
   },
   {
@@ -139,8 +249,18 @@ const mockData: Case[] = [
     date_of_birth: '2023-11-15',
     date_of_incident: '2023-11-15',
     expenses: [
-      { id: 'e1', label: 'Medical Bill', amount: 500, deducted_from: 'Settlement' },
-      { id: 'e2', label: 'Transportation', amount: 150, deducted_from: 'Client' },
+      {
+        id: 'e1',
+        label: 'Medical Bill',
+        amount: 500,
+        deducted_from: 'Settlement',
+      },
+      {
+        id: 'e2',
+        label: 'Transportation',
+        amount: 150,
+        deducted_from: 'Client',
+      },
     ],
   },
   {
@@ -153,11 +273,36 @@ const mockData: Case[] = [
     date_of_birth: '2023-11-15',
     date_of_incident: '2023-11-15',
     expenses: [
-      { id: 'e1', label: 'Medical Bill', amount: 500, deducted_from: 'Settlement' },
-      { id: 'e2', label: 'Transportation', amount: 150, deducted_from: 'Client' },
-      { id: 'e3', label: 'Transportation', amount: 150, deducted_from: 'Client' },
-      { id: 'e4', label: 'Transportation', amount: 150, deducted_from: 'Client' },
-      { id: 'e5', label: 'Transportation', amount: 150, deducted_from: 'Client' },
+      {
+        id: 'e1',
+        label: 'Medical Bill',
+        amount: 500,
+        deducted_from: 'Settlement',
+      },
+      {
+        id: 'e2',
+        label: 'Transportation',
+        amount: 150,
+        deducted_from: 'Client',
+      },
+      {
+        id: 'e3',
+        label: 'Transportation',
+        amount: 150,
+        deducted_from: 'Client',
+      },
+      {
+        id: 'e4',
+        label: 'Transportation',
+        amount: 150,
+        deducted_from: 'Client',
+      },
+      {
+        id: 'e5',
+        label: 'Transportation',
+        amount: 150,
+        deducted_from: 'Client',
+      },
     ],
   },
   {
@@ -168,16 +313,16 @@ const mockData: Case[] = [
     client_status: 'Active',
     law_firm: 'Abogados S.A.',
     date_of_birth: '2023-11-15',
-    date_of_incident: '2023-11-15'
+    date_of_incident: '2023-11-15',
   },
 ]
 
 export class MockCaseRepository implements CaseRepository {
   async getAll(): Promise<Case[]> {
-    return new Promise(resolve => setTimeout(() => resolve(mockData), 300))
+    return new Promise((resolve) => setTimeout(() => resolve(mockData), 300))
   }
 
   async getById(id: string): Promise<Case | null> {
-    return mockData.find(c => c.id === id) ?? null
+    return mockData.find((c) => c.id === id) ?? null
   }
 }

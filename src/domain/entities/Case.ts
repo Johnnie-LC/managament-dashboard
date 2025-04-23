@@ -1,5 +1,5 @@
-import { MedicalStatus } from "@domain/valueObjects/MedicalStatus"
-import { CaseExpense } from "@domain/entities/CaseExpense"
+import { MedicalStatus } from '@domain/valueObjects/MedicalStatus'
+import { CaseExpense } from '@domain/entities/CaseExpense'
 
 export interface Case {
   id: string
@@ -12,4 +12,3 @@ export interface Case {
   client_status: string
   expenses?: CaseExpense[]
 }
-  

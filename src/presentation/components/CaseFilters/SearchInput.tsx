@@ -1,6 +1,6 @@
 interface SearchInputProps {
-  value: string;
-  onChange: (value: string) => void;
+  value: string
+  onChange: (value: string) => void
 }
 
 export function SearchInput({ value, onChange }: SearchInputProps) {
@@ -12,5 +12,5 @@ export function SearchInput({ value, onChange }: SearchInputProps) {
       value={value}
       onChange={(e) => onChange(e.target.value)}
     />
-  );
+  )
 }

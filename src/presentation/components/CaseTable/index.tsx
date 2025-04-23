@@ -8,7 +8,7 @@ interface Props {
 
 export default function CaseTable({ cases }: Props) {
   return (
-    <div className="[@media(max-height:998px)]:h-130 h-180 overflow-y-auto ">
+    <div className="max-h-[60vh] overflow-y-auto pr-2 grid grid-cols-1  gap-6">
       <table className="min-w-full rounded-lg">
         <CaseTableHead />
         <CaseTableBody cases={cases} />
